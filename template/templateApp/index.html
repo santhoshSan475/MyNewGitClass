@@ -1,0 +1,31 @@
+{% extends 'templateApp/base.html' %}
+{% block content %}
+<section style="text-align:center; padding:40px;">
+    <h1>Welcome to Our Django Website 🚀</h1>
+    <p>Your journey into powerful web development starts here.</p>
+    <a href="{% url 'about' %}" style="padding:10px 20px; background:#4CAF50; color:white; text-decoration:none; border-radius:5px;">
+        Learn More About Us
+    </a>
+</section>
+
+<hr>
+
+<section style="display:flex; justify-content:space-around; padding:30px;">
+    <div>
+        <h2>⚡ {{feature1 | upper }}</h2>
+        <p>Django helps build secure and scalable applications quickly.</p>
+    </div>
+
+    <div>
+        <h2>🔒 {{feature2 | lower}}</h2>
+        <p>Protection against common threats like SQL Injection and XSS.</p>
+    </div>
+
+    <div>
+        <h2>📦 {{feature3|truncatewords:1 }}</h2>
+        <p>Comes with admin panel, ORM, and many built-in features.</p>
+    </div>
+</section>
+
+<hr>
+{% endblock %}

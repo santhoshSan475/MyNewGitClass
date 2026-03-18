@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title> {{ title | default:"my document" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'sample.css' %}">
+</head>
+<body>
+
+    <!-- 🔷 Navigation Bar -->
+     {% include 'templateApp/partial/header.html' %}
+    <!-- 🔶 Main Page Content -->
+    <main style="min-height:70vh; padding:20px;">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <!-- 🔻 Footer -->
+     {% include 'templateApp/partial/footer.html' %}
+</body>
+</html>

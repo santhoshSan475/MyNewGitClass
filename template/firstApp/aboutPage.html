@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+        p{
+          color:white;
+        }
+    </style>
+    <link rel="stylesheet" href="{%  static 'sample.css' %}">
+</head>
+<body style="background-color:lightgreen;">
+   <p>Name: {{name}}</p>
+   <p>Age : {{age}}</p>
+   <p>Gender: {{gender}}</p>
+   <p>Qualification: {{qualification}}</p>
+   <img src="{% static '1695627901550-download (52).png' %}">
+</body>
+</html>
